@@ -501,3 +501,332 @@ a:hover {
 .post-card:nth-child(3) {
     animation-delay: 0.3s;
 }
+
+/* ========================================
+   Page-Specific Styles
+   ======================================== */
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--space-xl);
+}
+
+.page-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--deep-burgundy);
+    margin-bottom: var(--space-md);
+}
+
+.page-description {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+/* Archive Page */
+.archive-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.archive-year {
+    margin-bottom: var(--space-xl);
+}
+
+.year-title {
+    font-size: 2rem;
+    color: var(--deep-burgundy);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--sepia-light);
+}
+
+.archive-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--sepia-light);
+}
+
+.archive-date {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--warm-brown);
+    font-weight: 600;
+}
+
+.archive-title {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-sm);
+    line-height: 1.3;
+}
+
+.archive-title a {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.archive-title a:hover {
+    color: var(--deep-burgundy);
+}
+
+.archive-excerpt {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-sm);
+}
+
+.archive-meta {
+    font-size: 0.95rem;
+    color: var(--warm-brown);
+}
+
+.archive-cookbook {
+    font-style: italic;
+}
+
+.archive-separator {
+    margin: 0 0.5rem;
+}
+
+.archive-tags a {
+    color: var(--warm-brown);
+    transition: color 0.3s ease;
+}
+
+.archive-tags a:hover {
+    color: var(--deep-burgundy);
+}
+
+.archive-placeholder {
+    text-align: center;
+    padding: var(--space-xl);
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Cuisine Page */
+.cuisine-sections {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cuisine-section {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 2px solid var(--sepia-light);
+}
+
+.cuisine-section:last-child {
+    border-bottom: none;
+}
+
+.cuisine-title {
+    font-size: 2.25rem;
+    color: var(--deep-burgundy);
+    margin-bottom: var(--space-md);
+}
+
+.cuisine-description {
+    margin-bottom: var(--space-lg);
+    padding: var(--space-md);
+    background-color: var(--aged-paper);
+    border-left: 4px solid var(--warm-brown);
+    border-radius: 4px;
+}
+
+.cuisine-description p {
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
+
+.cuisine-posts {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.cuisine-post h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cuisine-post h3 a {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.cuisine-post h3 a:hover {
+    color: var(--deep-burgundy);
+}
+
+.post-meta-line {
+    font-size: 0.95rem;
+    color: var(--warm-brown);
+}
+
+.cookbook-ref {
+    font-style: italic;
+}
+
+.date-ref {
+    margin-left: var(--space-sm);
+}
+
+/* Cookbooks Page */
+.cookbook-grid {
+    display: grid;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+.cookbook-entry {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.cookbook-cover-container {
+    height: fit-content;
+}
+
+.cookbook-cover-img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: var(--shadow-sm);
+}
+
+.cookbook-entry-title {
+    font-size: 1.75rem;
+    color: var(--deep-burgundy);
+    margin-bottom: 0.25rem;
+}
+
+.cookbook-author {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.cookbook-meta {
+    font-size: 0.9rem;
+    color: var(--warm-brown);
+    margin-bottom: var(--space-md);
+}
+
+.cookbook-summary {
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+.cookbook-essays h4 {
+    font-size: 1rem;
+    color: var(--deep-burgundy);
+    margin-bottom: var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.cookbook-essays ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cookbook-essays li {
+    margin-bottom: 0.5rem;
+}
+
+.cookbook-essays a {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.cookbook-essays a:hover {
+    color: var(--deep-burgundy);
+}
+
+.cookbook-philosophy {
+    max-width: 800px;
+    margin: var(--space-xl) auto;
+    padding: var(--space-lg);
+    background-color: var(--aged-paper);
+    border-radius: 8px;
+}
+
+.cookbook-philosophy h2 {
+    font-size: 2rem;
+    color: var(--deep-burgundy);
+    margin-bottom: var(--space-md);
+}
+
+.cookbook-philosophy p {
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+/* About Page */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section {
+    margin-bottom: var(--space-xl);
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    color: var(--deep-burgundy);
+    margin-bottom: var(--space-md);
+}
+
+.about-section p {
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+}
+
+.about-section ul {
+    margin-bottom: var(--space-md);
+}
+
+.approach-list {
+    list-style-position: outside;
+    padding-left: 1.5rem;
+}
+
+.approach-list li {
+    margin-bottom: var(--space-sm);
+    line-height: 1.7;
+}
+
+/* Responsive for New Pages */
+@media (max-width: 768px) {
+    .archive-item {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+    
+    .cookbook-entry {
+        grid-template-columns: 1fr;
+    }
+    
+    .cookbook-cover-container {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+}
