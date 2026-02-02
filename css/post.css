@@ -1,0 +1,342 @@
+/* ========================================
+   Post Article Styles
+   ======================================== */
+
+.post-article {
+    margin-bottom: var(--space-xl);
+}
+
+/* Post Header */
+.post-header {
+    max-width: var(--content-width);
+    margin: 0 auto var(--space-lg);
+    text-align: center;
+}
+
+.post-categories {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.category-tag {
+    background-color: var(--sepia-light);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+}
+
+.article-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+    color: var(--deep-burgundy);
+}
+
+.article-meta {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.meta-item em {
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* Hero Image */
+.post-hero {
+    margin-bottom: var(--space-xl);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+}
+
+.image-caption {
+    margin-top: var(--space-sm);
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+/* Post Body */
+.post-body {
+    max-width: var(--content-width);
+    margin: 0 auto var(--space-xl);
+}
+
+.post-body p {
+    margin-bottom: 1.75rem;
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.lead-paragraph {
+    font-size: 1.375rem !important;
+    line-height: 1.7 !important;
+    color: var(--text-primary);
+    margin-bottom: 2rem !important;
+}
+
+.lead-paragraph::first-letter {
+    font-size: 4rem;
+    line-height: 1;
+    float: left;
+    margin: 0 0.1em 0 0;
+    font-family: var(--font-display);
+    color: var(--deep-burgundy);
+}
+
+.post-body em {
+    font-style: italic;
+}
+
+.post-body strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Pull Quote */
+.pullquote {
+    margin: var(--space-lg) 0;
+    padding: var(--space-md) var(--space-lg);
+    border-left: 4px solid var(--deep-burgundy);
+    background-color: var(--aged-paper);
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    font-style: italic;
+    color: var(--text-primary);
+}
+
+/* Recipe Card */
+.recipe-card {
+    max-width: 900px;
+    margin: var(--space-xl) auto;
+    background-color: white;
+    border-radius: 8px;
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-md);
+    border-top: 4px solid var(--deep-burgundy);
+}
+
+.recipe-header {
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 2px solid var(--sepia-light);
+}
+
+.recipe-title {
+    font-size: 2.25rem;
+    font-weight: 500;
+    color: var(--deep-burgundy);
+    margin-bottom: var(--space-sm);
+}
+
+.recipe-source {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+.recipe-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+}
+
+.recipe-section h3 {
+    font-size: 1.5rem;
+    color: var(--deep-burgundy);
+    margin-bottom: var(--space-md);
+    font-weight: 500;
+}
+
+.ingredient-list,
+.method-list {
+    padding-left: 1.5rem;
+}
+
+.ingredient-list li,
+.method-list li {
+    margin-bottom: var(--space-sm);
+    line-height: 1.6;
+}
+
+.method-list li {
+    margin-bottom: var(--space-md);
+    padding-left: 0.5rem;
+}
+
+.recipe-notes {
+    grid-column: 1 / -1;
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    background-color: var(--aged-paper);
+    border-radius: 4px;
+    border-left: 4px solid var(--warm-brown);
+}
+
+.recipe-notes h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+}
+
+.recipe-notes p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-sm);
+}
+
+.recipe-notes p:last-child {
+    margin-bottom: 0;
+}
+
+/* Cookbook Info */
+.cookbook-info {
+    max-width: 900px;
+    margin: var(--space-xl) auto;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    background-color: var(--aged-paper);
+    border-radius: 8px;
+}
+
+.cookbook-cover img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: var(--shadow-sm);
+}
+
+.cookbook-details h3 {
+    font-size: 1.5rem;
+    color: var(--deep-burgundy);
+    margin-bottom: var(--space-sm);
+    font-weight: 500;
+}
+
+.cookbook-details h4 {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+    font-weight: 400;
+}
+
+.cookbook-author {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+.cookbook-meta {
+    font-size: 0.9rem;
+    color: var(--warm-brown);
+    margin-bottom: var(--space-md);
+    font-weight: 600;
+}
+
+.cookbook-description {
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Post Navigation */
+.post-navigation {
+    max-width: var(--content-width);
+    margin: var(--space-xl) auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--space-lg);
+    border-top: 2px solid var(--sepia-light);
+}
+
+.post-navigation a {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--deep-burgundy);
+    transition: transform 0.3s ease;
+}
+
+.post-navigation a:hover {
+    transform: translateY(-2px);
+}
+
+.nav-home {
+    color: var(--text-secondary) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 968px) {
+    .article-title {
+        font-size: 2.5rem;
+    }
+    
+    .recipe-body {
+        grid-template-columns: 1fr;
+    }
+    
+    .cookbook-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .cookbook-cover {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    .post-navigation {
+        flex-direction: column;
+        gap: var(--space-sm);
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .article-title {
+        font-size: 2rem;
+    }
+    
+    .lead-paragraph {
+        font-size: 1.25rem !important;
+    }
+    
+    .lead-paragraph::first-letter {
+        font-size: 3rem;
+    }
+    
+    .pullquote {
+        font-size: 1.25rem;
+        padding: var(--space-md);
+    }
+    
+    .recipe-card {
+        padding: var(--space-md);
+    }
+    
+    .recipe-title {
+        font-size: 1.75rem;
+    }
+}

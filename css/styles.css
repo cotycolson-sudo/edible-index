@@ -1,0 +1,503 @@
+/* ========================================
+   CSS Variables - Library Cookbook Palette
+   ======================================== */
+:root {
+    /* Colors - Warm, aged paper tones */
+    --paper-cream: #F8F5F0;
+    --aged-paper: #F0EBE3;
+    --sepia-light: #E8DFD0;
+    --warm-brown: #B8967D;
+    --deep-burgundy: #6B2737;
+    --dark-chocolate: #3D2817;
+    --text-primary: #2C1810;
+    --text-secondary: #5C463C;
+    
+    /* Typography */
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Crimson Text', serif;
+    
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 3rem;
+    --space-xl: 4rem;
+    
+    /* Layout */
+    --container-width: 1200px;
+    --content-width: 720px;
+    
+    /* Shadows - Subtle, like books on a shelf */
+    --shadow-sm: 0 2px 8px rgba(61, 40, 23, 0.08);
+    --shadow-md: 0 4px 16px rgba(61, 40, 23, 0.12);
+    --shadow-lg: 0 8px 24px rgba(61, 40, 23, 0.15);
+}
+
+/* ========================================
+   Base Styles
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    background-color: var(--paper-cream);
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(184, 150, 125, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(107, 39, 55, 0.03) 0%, transparent 50%);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* ========================================
+   Typography
+   ======================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-primary);
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: var(--deep-burgundy);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--dark-chocolate);
+}
+
+/* ========================================
+   Header
+   ======================================== */
+.site-header {
+    background-color: var(--aged-paper);
+    border-bottom: 2px solid var(--sepia-light);
+    padding: var(--space-lg) 0 var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.header-content {
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+.site-title {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: var(--deep-burgundy);
+    margin-bottom: var(--space-xs);
+    text-transform: lowercase;
+}
+
+.site-tagline {
+    font-size: 1.125rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--warm-brown);
+}
+
+.nav-link {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--deep-burgundy);
+    background-color: rgba(107, 39, 55, 0.05);
+}
+
+/* ========================================
+   Featured Post
+   ======================================== */
+.featured-post {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-post:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.post-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured-post:hover .post-image img {
+    transform: scale(1.05);
+}
+
+.post-category {
+    position: absolute;
+    top: var(--space-sm);
+    left: var(--space-sm);
+    background-color: var(--deep-burgundy);
+    color: white;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+}
+
+.post-content {
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--sepia-light);
+}
+
+.cookbook-title {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+.post-date {
+    font-size: 0.875rem;
+    color: var(--warm-brown);
+    font-weight: 600;
+}
+
+.post-title {
+    font-size: 2.25rem;
+    margin-bottom: var(--space-sm);
+    line-height: 1.3;
+}
+
+.post-title a {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.post-title a:hover {
+    color: var(--deep-burgundy);
+}
+
+.post-excerpt {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+}
+
+.read-more {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--deep-burgundy);
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover {
+    transform: translateX(4px);
+}
+
+/* ========================================
+   Posts Grid
+   ======================================== */
+.posts-grid {
+    margin-bottom: var(--space-xl);
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--sepia-light);
+    color: var(--deep-burgundy);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-lg);
+}
+
+.post-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-image {
+    height: 240px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.post-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: var(--space-md);
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+    font-size: 0.875rem;
+}
+
+.card-category {
+    background-color: var(--sepia-light);
+    color: var(--text-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-family: var(--font-display);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-date {
+    color: var(--warm-brown);
+    font-weight: 600;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+    line-height: 1.3;
+}
+
+.card-title a {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.card-title a:hover {
+    color: var(--deep-burgundy);
+}
+
+.card-excerpt {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+.site-footer {
+    background-color: var(--dark-chocolate);
+    color: var(--sepia-light);
+    padding: var(--space-xl) 0 var(--space-md);
+    margin-top: var(--space-xl);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid rgba(248, 245, 240, 0.2);
+}
+
+.footer-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    align-items: flex-end;
+}
+
+.footer-links a {
+    color: var(--sepia-light);
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--warm-brown);
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+@media (max-width: 968px) {
+    .featured-post {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-image {
+        height: 400px;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .footer-links {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 640px) {
+    .site-title {
+        font-size: 3rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .post-title {
+        font-size: 1.75rem;
+    }
+    
+    .main-nav {
+        gap: var(--space-sm);
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.featured-post,
+.post-card {
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+.post-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.post-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.post-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
